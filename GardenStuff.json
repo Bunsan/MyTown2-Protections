@@ -1,8 +1,8 @@
 {
-  "modid": "pixelmon",
+  "modid": "GardenStuff",
   "segments": [
     {
-      "class": "com.pixelmonmod.pixelmon.blocks.apricornTrees.BlockApricornTree",
+      "class": "com.jaquadro.minecraft.gardenstuff.block.BlockBloomeryFurnace",
       "type": "block",
       "actions": "RIGHT_CLICK",
       "meta": -1,

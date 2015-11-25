@@ -1,8 +1,8 @@
 {
-  "modid": "pixelmon",
+  "modid": "mcjtylib",
   "segments": [
     {
-      "class": "com.pixelmonmod.pixelmon.blocks.apricornTrees.BlockApricornTree",
+      "class": "mcjty.container.GenericContainerBlock",
       "type": "block",
       "actions": "RIGHT_CLICK",
       "meta": -1,

@@ -4,24 +4,12 @@
     {
       "class": "com.rwtema.extrautils.tileentity.enderquarry.TileEntityEnderQuarry",
       "type": "tileEntity",
-      "hasOwner": true,
-      "flag": "MODIFY",
+      "retainsOwner": true,
+      "flags": "MODIFY",
       "condition": "started == true",
       "started": [
         {
           "element": "started",
-          "type": "FIELD"
-        }
-      ],
-      "zMin": [
-        {
-          "element": "min_z",
-          "type": "FIELD"
-        }
-      ],
-      "zMax": [
-        {
-          "element": "max_z",
           "type": "FIELD"
         }
       ],
@@ -36,25 +24,32 @@
           "element": "max_x",
           "type": "FIELD"
         }
+      ],
+      "yMin": 0,
+      "yMax": [
+        {
+          "element": "chunk_y",
+          "type": "FIELD"
+        }
+      ],
+      "zMin": [
+        {
+          "element": "min_z",
+          "type": "FIELD"
+        }
+      ],
+      "zMax": [
+        {
+          "element": "max_z",
+          "type": "FIELD"
+        }
       ]
     },
     {
       "class": "com.rwtema.extrautils.tileentity.TileEntityEnderThermicLavaPump",
       "type": "tileEntity",
-      "hasOwner": true,
-      "flag": "MODIFY",
-      "zMin": [
-        {
-          "element": "chunk_z * 16",
-          "type": "FORMULA"
-        }
-      ],
-      "zMax": [
-        {
-          "element": "zMin + 15",
-          "type": "FORMULA"
-        }
-      ],
+      "retainsOwner": true,
+      "flags": "MODIFY",
       "xMin": [
         {
           "element": "chunk_x * 16",
@@ -67,9 +62,34 @@
           "type": "FORMULA"
         }
       ],
+      "yMin": 0,
+      "yMax": [
+        {
+          "element": "te_y - 1",
+          "type": "FORMULA"
+        }
+      ],
+      "zMin": [
+        {
+          "element": "chunk_z * 16",
+          "type": "FORMULA"
+        }
+      ],
+      "zMax": [
+        {
+          "element": "zMin + 15",
+          "type": "FORMULA"
+        }
+      ],
       "chunk_x": [
         {
           "element": "chunk_x",
+          "type": "FIELD"
+        }
+      ],
+      "te_y": [
+        {
+          "element": "field_145848_d",
           "type": "FIELD"
         }
       ],
@@ -83,44 +103,44 @@
     {
       "class": "com.rwtema.extrautils.block.BlockDrum",
       "type": "block",
-      "blockType": "RIGHT_CLICK",
+      "actions": "RIGHT_CLICK",
       "meta": -1,
-      "flag": "ACCESS"
+      "flags": "ACCESS"
     },
     {
       "class": "com.rwtema.extrautils.block.BlockFilingCabinet",
       "type": "block",
-      "blockType": "RIGHT_CLICK",
+      "actions": "RIGHT_CLICK",
       "meta": -1,
-      "flag": "ACCESS"
+      "flags": "ACCESS"
     },
     {
       "class": "com.rwtema.extrautils.block.BlockPortal",
       "type": "block",
-      "blockType": "RIGHT_CLICK",
+      "actions": "RIGHT_CLICK",
       "meta": -1,
-      "flag": "ACCESS"
+      "flags": "ACCESS"
     },
     {
       "class": "com.rwtema.extrautils.block.BlockMultiBlock",
       "type": "block",
-      "blockType": "RIGHT_CLICK",
+      "actions": "RIGHT_CLICK",
       "meta": -1,
-      "flag": "ACCESS"
+      "flags": "ACCESS"
     },
     {
       "class": "com.rwtema.extrautils.item.ItemPaintbrush",
       "type": "item",
-      "itemType": "RIGHT_CLICK_BLOCK",
-      "onAdjacent": false,
-      "flag": "MODIFY"
+      "actions": "RIGHT_CLICK_BLOCK",
+      "isAdjacent": false,
+      "flags": "MODIFY"
     },
     {
       "class": "com.rwtema.extrautils.item.ItemTemporalHoe",
       "type": "item",
-      "itemType": "RIGHT_CLICK_BLOCK",
-      "onAdjacent": false,
-      "flag": "MODIFY"
+      "actions": "RIGHT_CLICK_BLOCK",
+      "isAdjacent": false,
+      "flags": "MODIFY"
     }
   ]
 }
